@@ -42,15 +42,15 @@ export function Hero() {
             </span>
 
             <h1 className="mt-5 font-display font-extrabold tracking-tight text-ink text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.05]">
-              Launch a Professional Website Without Paying for an Expensive Domain.
+              Launch a Professional Website Without Paying for an Expensive Hosting.
             </h1>
 
             <p className="mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">
-              Get a clean, fast, AI-built website for your business — hosted on
-              a free subdomain so you can launch without the yearly cost of a
-              custom domain. You stay focused on running the business; we
-              handle design, copy, hosting and launch. Upgrade to a custom
-              domain whenever you are ready — never because you have to.
+              You want a website for your business. But paying for hosting every
+              year is hard. We build your website with AI, host it for free on
+              a subdomain, and hand it over ready to use. No big bills. No
+              confusion. Just a clean, fast website your customers will trust —
+              so you can focus on running your business.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -64,7 +64,7 @@ export function Hero() {
                 Let&apos;s Talk
               </a>
               <Link
-                href="#services"
+                href="#work"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-navy bg-transparent px-6 py-3.5 text-sm font-semibold text-navy transition-all hover:bg-navy hover:text-white hover:-translate-y-0.5"
               >
                 See Our Work

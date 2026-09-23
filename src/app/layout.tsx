@@ -16,15 +16,16 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Launch a Professional Website Without an Expensive Domain | BestBeny Digital",
+  title: "Launch a Professional Website Without an Expensive Hosting | BestBeny Digital",
   description:
-    "Get a clean, fast, AI-built website for your business — hosted on a free subdomain so you can launch without the yearly cost of a custom domain. Design, copy, hosting and launch handled for you by BestBeny Digital.",
+    "You want a website for your business. Paying for hosting every year is hard. We build your website with AI, host it for free, and hand it over ready to use. No big bills. No confusion.",
   keywords: [
     "AI website design",
     "AI website builder",
-    "free subdomain website",
+    "free hosting website",
     "affordable website design",
-    "no expensive domain",
+    "no expensive hosting",
+    "free subdomain website",
     "web design",
     "branding",
     "digital marketing",
@@ -38,9 +39,9 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Launch a Professional Website Without an Expensive Domain",
+    title: "Launch a Professional Website Without an Expensive Hosting",
     description:
-      "AI-built websites hosted on a free subdomain — launch without the yearly cost of a custom domain. Upgrade later, only when you are ready.",
+      "We build your website with AI, host it for free, and hand it over ready to use. No big bills. No confusion.",
     url: "https://bestbenydigitalbrand.space-z.ai",
     siteName: "BestBeny Digital",
     locale: "en_US",
@@ -48,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Launch a Professional Website Without an Expensive Domain",
-    description: "AI-built websites on a free subdomain. Launch fast, pay nothing for hosting.",
+    title: "Launch a Professional Website Without an Expensive Hosting",
+    description: "AI-built website, hosted for free. No big bills. No confusion.",
   },
 };
 

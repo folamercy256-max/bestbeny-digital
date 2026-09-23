@@ -17,7 +17,7 @@ export const BRAND = {
   whatsappNumber: "2348000000000",
   whatsappMessage:
     "Hello BestBeny Digital, I'd like to talk about an AI website design project.",
-  email: "hello@bestbenydigital.com",
+  email: "bestbenydigitabrand@gmail.com",
   domain: "bestbenydigital.com",
 } as const;
 
@@ -29,7 +29,7 @@ export const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
+  { label: "Our Work", href: "#work" },
   { label: "FAQ", href: "#faq" },
 ] as const;
 

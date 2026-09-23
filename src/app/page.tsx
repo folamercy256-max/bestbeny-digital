@@ -5,6 +5,7 @@ import { About } from "@/components/site/About";
 import { Services } from "@/components/site/Services";
 import { WhyBestBeny } from "@/components/site/WhyBestBeny";
 import { HowWeWork } from "@/components/site/HowWeWork";
+import { Portfolio } from "@/components/site/Portfolio";
 import { Stats } from "@/components/site/Stats";
 import { Testimonials } from "@/components/site/Testimonials";
 import { FAQ } from "@/components/site/FAQ";
@@ -27,6 +28,7 @@ import { Footer } from "@/components/site/Footer";
  *   Services      — GOLD (soft tint)
  *   WhyBestBeny   — NAVY BLUE
  *   HowWeWork     — WHITE
+ *   Portfolio     — NAVY TINT (very pale navy) — 14 reserved open slots
  *   Stats         — BLACK
  *   Testimonials  — WHITE
  *   FAQ           — GOLD (soft tint)
@@ -36,7 +38,6 @@ import { Footer } from "@/components/site/Footer";
  * Removed per the user's request:
  *   - "Strategy" section
  *   - "From the journal" section and its image
- *   - Portfolio section (sample briefs + open slots)
  *   - Any image that is not relevant to the AI website design service
  */
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
         <Services />
         <WhyBestBeny />
         <HowWeWork />
+        <Portfolio />
         <Stats />
         <Testimonials />
         <FAQ />
