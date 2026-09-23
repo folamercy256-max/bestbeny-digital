@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/brand";
 
 /**
@@ -48,13 +48,6 @@ export function FinalCTA() {
           >
             <MessageCircle className="h-4 w-4" />
             Let&apos;s Talk on WhatsApp
-          </a>
-          <a
-            href="#work"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-white/70 px-6 py-3.5 text-sm font-semibold text-white transition-all hover:bg-white hover:text-navy hover:-translate-y-0.5"
-          >
-            See our work
-            <ArrowRight className="h-4 w-4" />
           </a>
         </div>
 

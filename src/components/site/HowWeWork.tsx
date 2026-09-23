@@ -32,7 +32,7 @@ const STEPS = [
 
 export function HowWeWork() {
   return (
-    <section className="relative bg-white py-20 sm:py-28">
+    <section id="process" className="relative bg-white py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">

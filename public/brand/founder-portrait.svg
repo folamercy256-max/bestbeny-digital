@@ -1,0 +1,78 @@
+<svg viewBox="0 0 640 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BestBeny Digital founder portrait placeholder">
+  <!-- Background: navy with gold radial accent -->
+  <defs>
+    <radialGradient id="bgGlow" cx="78%" cy="18%" r="55%">
+      <stop offset="0%" stop-color="#F4B942" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#F4B942" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#F4B942" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2C4D75"/>
+      <stop offset="100%" stop-color="#142841"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7A5538"/>
+      <stop offset="100%" stop-color="#5A3D26"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4B942"/>
+      <stop offset="100%" stop-color="#D89A1F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Navy background -->
+  <rect width="640" height="720" fill="#1E3A5F"/>
+  <rect width="640" height="720" fill="url(#bgGlow)"/>
+
+  <!-- Subtle dot grid -->
+  <g fill="#FFFFFF" opacity="0.05">
+    <circle cx="60"  cy="80"  r="2"/>
+    <circle cx="120" cy="80"  r="2"/>
+    <circle cx="180" cy="80"  r="2"/>
+    <circle cx="60"  cy="140" r="2"/>
+    <circle cx="120" cy="140" r="2"/>
+    <circle cx="60"  cy="200" r="2"/>
+  </g>
+
+  <!-- Decorative gold ring behind portrait -->
+  <circle cx="320" cy="320" r="220" stroke="#F4B942" stroke-width="1.5" opacity="0.25"/>
+  <circle cx="320" cy="320" r="190" stroke="#F4B942" stroke-width="1" opacity="0.15"/>
+
+  <!-- Founder silhouette card -->
+  <g transform="translate(150, 130)">
+    <!-- Shoulders (gold shirt) -->
+    <path d="M40 360 Q40 270 170 270 Q300 270 300 360 L300 420 L40 420 Z" fill="url(#shirtGrad)"/>
+    <!-- Shirt collar -->
+    <path d="M150 270 L170 310 L190 270 L210 310 L170 350 L130 310 Z" fill="#1E3A5F" opacity="0.85"/>
+    <!-- Neck -->
+    <rect x="155" y="225" width="30" height="55" fill="url(#skinGrad)"/>
+    <!-- Head -->
+    <ellipse cx="170" cy="180" rx="75" ry="90" fill="url(#skinGrad)"/>
+    <!-- Hair / cap (navy) -->
+    <path d="M95 175 Q90 95 170 90 Q250 95 245 175 Q240 130 170 125 Q100 130 95 175 Z" fill="#142841"/>
+    <!-- Subtle face highlight -->
+    <ellipse cx="155" cy="195" rx="22" ry="14" fill="#FFFFFF" opacity="0.08"/>
+    <!-- Beard / jaw shadow -->
+    <path d="M105 230 Q120 275 170 285 Q220 275 235 230 Q220 260 170 265 Q120 260 105 230 Z" fill="#3A2718" opacity="0.5"/>
+  </g>
+
+  <!-- Floating chip: AI Website Builder -->
+  <g transform="translate(420, 90)">
+    <rect width="190" height="48" rx="24" fill="#FFFFFF"/>
+    <circle cx="26" cy="24" r="10" fill="#1E3A5F"/>
+    <path d="M21 24 L24 27 L31 20" stroke="#F4B942" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="48" y="29" font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">AI Website Builder</text>
+  </g>
+
+  <!-- Floating chip: Built in days -->
+  <g transform="translate(40, 470)">
+    <rect width="170" height="44" rx="22" fill="#F4B942"/>
+    <text x="20" y="28" font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#142841">Live in 1–3 weeks</text>
+  </g>
+
+  <!-- Caption: founder portrait placeholder label -->
+  <g transform="translate(320, 670)">
+    <rect x="-140" y="-22" width="280" height="44" rx="22" fill="#FFFFFF" opacity="0.08"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Manrope, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" letter-spacing="0.18em">FOUNDER · BESTBENY DIGITAL</text>
+  </g>
+</svg>

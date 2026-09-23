@@ -16,17 +16,19 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "BestBeny Digital | AI Website Design for Modern Businesses",
+  title: "Launch a Professional Website Without an Expensive Domain | BestBeny Digital",
   description:
-    "BestBeny Digital designs AI-built websites and digital experiences that look professional, communicate clearly and make it easy for customers to choose you.",
+    "Get a clean, fast, AI-built website for your business — hosted on a free subdomain so you can launch without the yearly cost of a custom domain. Design, copy, hosting and launch handled for you by BestBeny Digital.",
   keywords: [
     "AI website design",
     "AI website builder",
+    "free subdomain website",
+    "affordable website design",
+    "no expensive domain",
     "web design",
     "branding",
     "digital marketing",
     "BestBeny Digital",
-    "website design",
   ],
   authors: [{ name: "BestBeny Digital" }],
   creator: "BestBeny Digital",
@@ -36,9 +38,9 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "BestBeny Digital | AI Website Design",
+    title: "Launch a Professional Website Without an Expensive Domain",
     description:
-      "AI-powered websites and digital experiences that make it easier for customers to choose you.",
+      "AI-built websites hosted on a free subdomain — launch without the yearly cost of a custom domain. Upgrade later, only when you are ready.",
     url: "https://bestbenydigitalbrand.space-z.ai",
     siteName: "BestBeny Digital",
     locale: "en_US",
@@ -46,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BestBeny Digital",
-    description: "AI website design that moves your business forward.",
+    title: "Launch a Professional Website Without an Expensive Domain",
+    description: "AI-built websites on a free subdomain. Launch fast, pay nothing for hosting.",
   },
 };
 
