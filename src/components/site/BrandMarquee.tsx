@@ -6,9 +6,9 @@
  * "Helping businesses show up better online." — the brand-name strip
  * that the user asked to be scrolling.
  *
- * Two rows of brand names scroll in opposite directions on a smooth,
- * infinite loop. Hovering a name lifts it slightly. No images, just
- * stylised wordmarks — relevant and natural.
+ * Section background: NAVY BLUE (one of the four brand colors).
+ * Brand names scroll in opposite directions on a smooth, infinite loop.
+ * Gold accent dots separate items. No images, just stylised wordmarks.
  */
 const BRANDS_TOP = [
   "NOVA",
@@ -54,9 +54,10 @@ function Row({
         {items.map((b, i) => (
           <span
             key={`${b}-${i}`}
-            className="text-xl sm:text-2xl font-display font-semibold tracking-tight text-ink/35 hover:text-violet transition-colors duration-300 cursor-default whitespace-nowrap"
+            className="inline-flex items-center gap-3 text-xl sm:text-2xl font-display font-semibold tracking-tight text-white/55 hover:text-gold transition-colors duration-300 cursor-default whitespace-nowrap"
           >
             {b}
+            <span className="h-1.5 w-1.5 rounded-full bg-gold/70" aria-hidden />
           </span>
         ))}
       </div>
@@ -66,9 +67,18 @@ function Row({
 
 export function BrandMarquee() {
   return (
-    <section className="relative bg-cream py-14 sm:py-16 border-y border-violet/10">
-      <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
-        <p className="text-center text-sm font-medium uppercase tracking-[0.25em] text-ink/45">
+    <section className="on-dark relative bg-navy py-14 sm:py-16 border-y border-white/10 overflow-hidden">
+      {/* subtle gold wash */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(40% 60% at 10% 50%, rgba(244,185,66,0.10), transparent 60%)",
+        }}
+      />
+      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+        <p className="text-center text-sm font-medium uppercase tracking-[0.25em] text-gold">
           Helping businesses show up better online
         </p>
         <div className="mt-8 space-y-5">

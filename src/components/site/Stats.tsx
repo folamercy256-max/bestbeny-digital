@@ -3,11 +3,9 @@
 /**
  * Stats
  * -----
- * All numbers in this section are rendered in the logo violet color.
- *
- * The section uses a dark ink background so it visually anchors the
- * middle of the page and contrasts with the lighter sections around
- * it — a deliberate "different color per section" choice.
+ * Section background: BLACK (deep). One of the four brand colors.
+ * All numbers in this section render in GOLD (via .on-dark .brand-number)
+ * so they pop against the black background.
  *
  * Note: figures shown are clearly-labelled placeholder metrics. Replace
  * with verified numbers before publishing.
@@ -37,19 +35,19 @@ const STATS = [
 
 export function Stats() {
   return (
-    <section className="relative bg-ink py-20 sm:py-24 text-white overflow-hidden">
-      {/* soft brand wash on dark */}
+    <section className="on-dark relative bg-black-deep py-20 sm:py-24 text-white overflow-hidden">
+      {/* subtle brand wash on dark — navy + gold hints */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(40% 60% at 10% 10%, rgba(108,77,255,0.35), transparent 60%), radial-gradient(40% 50% at 95% 90%, rgba(244,185,66,0.20), transparent 60%)",
+            "radial-gradient(40% 60% at 10% 10%, rgba(30,58,95,0.55), transparent 60%), radial-gradient(40% 50% at 95% 90%, rgba(244,185,66,0.20), transparent 60%)",
         }}
       />
       <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet-soft">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
             By the numbers
           </p>
           <h2 className="mt-3 font-display font-extrabold tracking-tight text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
@@ -66,7 +64,7 @@ export function Stats() {
             >
               <dt className="sr-only">{s.label}</dt>
               <dd>
-                {/* number — logo violet */}
+                {/* on-dark → number renders in gold */}
                 <span className="font-display text-4xl sm:text-5xl font-extrabold brand-number">
                   {s.num}
                 </span>

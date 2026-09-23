@@ -4,17 +4,18 @@ import { ArrowRight } from "lucide-react";
 /**
  * About
  * -----
+ * Section background: WHITE.
  * A natural, plainly-written explanation of what BestBeny Digital does,
- * focused on AI website design. Each section uses a different background
- * color so the page reads in clear visual chapters.
+ * focused on AI website design. Numbers and key text use the logo color
+ * (navy).
  */
 export function About() {
   return (
-    <section id="about" className="relative bg-paper py-20 sm:py-28">
+    <section id="about" className="relative bg-white py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
               About BestBeny
             </p>
             <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
@@ -35,7 +36,7 @@ export function About() {
 
             <Link
               href="#services"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-violet px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-violet-soft hover:-translate-y-0.5"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-navy-soft hover:-translate-y-0.5"
             >
               More about what we do
               <ArrowRight className="h-4 w-4" />
@@ -65,7 +66,7 @@ export function About() {
               ].map((f) => (
                 <div
                   key={f.title}
-                  className="lift-on-hover rounded-2xl border border-violet/10 bg-white p-6"
+                  className="lift-on-hover rounded-2xl border border-navy/10 bg-white p-6"
                 >
                   <h3 className="font-display font-bold text-ink text-lg">
                     {f.title}

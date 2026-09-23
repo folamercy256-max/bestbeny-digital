@@ -30,7 +30,7 @@ export function Header() {
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-paper/85 backdrop-blur-xl border-b border-violet/10 shadow-[0_8px_30px_-12px_rgba(108,77,255,0.18)]"
+          ? "bg-white/90 backdrop-blur-xl border-b border-navy/10 shadow-[0_8px_30px_-12px_rgba(30,58,95,0.18)]"
           : "bg-transparent",
       )}
     >
@@ -42,7 +42,7 @@ export function Header() {
           <Link
             href="#home"
             aria-label="BestBeny Digital home"
-            className="shrink-0 rounded-xl p-1.5 -ml-1.5 transition-colors hover:bg-violet/5"
+            className="shrink-0 rounded-xl p-1.5 -ml-1.5 transition-colors hover:bg-navy/5"
           >
             <Logo size="md" />
           </Link>
@@ -53,7 +53,7 @@ export function Header() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="px-3.5 py-2 rounded-lg text-sm font-medium text-ink/70 hover:text-violet hover:bg-violet/5 transition-colors"
+                className="px-3.5 py-2 rounded-lg text-sm font-medium text-ink/70 hover:text-navy hover:bg-navy/5 transition-colors"
               >
                 {l.label}
               </Link>
@@ -65,7 +65,7 @@ export function Header() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-violet px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(108,77,255,0.55)] transition-all hover:bg-violet-soft hover:shadow-[0_14px_36px_-12px_rgba(108,77,255,0.7)] hover:-translate-y-0.5"
+              className="hidden sm:inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(30,58,95,0.55)] transition-all hover:bg-navy-soft hover:shadow-[0_14px_36px_-12px_rgba(30,58,95,0.7)] hover:-translate-y-0.5"
             >
               <MessageCircle className="h-4 w-4" />
               Let&apos;s Talk
@@ -76,7 +76,7 @@ export function Header() {
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
-              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-violet/15 text-ink hover:bg-violet/5 transition-colors"
+              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-navy/15 text-ink hover:bg-navy/5 transition-colors"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -86,14 +86,14 @@ export function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-violet/10 bg-paper/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-navy/10 bg-white/95 backdrop-blur-xl">
           <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 py-4 flex flex-col gap-1">
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-lg text-base font-medium text-ink/80 hover:text-violet hover:bg-violet/5 transition-colors"
+                className="px-3 py-3 rounded-lg text-base font-medium text-ink/80 hover:text-navy hover:bg-navy/5 transition-colors"
               >
                 {l.label}
               </Link>
@@ -103,7 +103,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-violet px-5 py-3 text-sm font-semibold text-white"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white"
             >
               <MessageCircle className="h-4 w-4" />
               Let&apos;s Talk on WhatsApp

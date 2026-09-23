@@ -45,25 +45,32 @@ const REASONS: Reason[] = [
 /**
  * WhyBestBeny
  * -----------
- * Section numbers (01–04) are in the logo violet color. The icons stay
- * neutral and shift to violet on hover (per the user's request). This
- * section uses the cream background so it visually separates from the
- * Services section above it (mist) and the HowWeWork section below it
- * (paper).
+ * Section background: NAVY BLUE. White text. Numbers (01–04) render in GOLD
+ * via the .on-dark .brand-number rule (so they pop on the dark background).
+ * Icons stay neutral-on-dark and shift to gold on hover.
  */
 export function WhyBestBeny() {
   return (
-    <section className="relative bg-cream py-20 sm:py-28 border-y border-violet/10">
-      <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+    <section className="on-dark relative bg-navy py-20 sm:py-28 text-white overflow-hidden">
+      {/* subtle gold wash */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(40% 60% at 90% 10%, rgba(244,185,66,0.18), transparent 60%)",
+        }}
+      />
+      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
               Why BestBeny
             </p>
-            <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
+            <h2 className="mt-3 font-display font-extrabold tracking-tight text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
               You shouldn&apos;t have to chase five people to ship one project.
             </h2>
-            <p className="mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">
+            <p className="mt-5 text-base sm:text-lg text-white/75 leading-relaxed">
               A good digital project needs more than good design. It needs
               someone who understands the business behind the brief. At
               BestBeny Digital, strategy, design and development work together
@@ -87,19 +94,20 @@ export function WhyBestBeny() {
 function ReasonCard({ reason: r }: { reason: Reason }) {
   const Icon = r.icon;
   return (
-    <article className="group lift-on-hover rounded-2xl border border-violet/10 bg-white p-6">
+    <article className="group lift-on-hover rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6">
       <div className="flex items-center justify-between">
+        {/* on-dark → numbers render in gold */}
         <span className="font-display text-3xl font-extrabold brand-number">
           {r.num}
         </span>
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-violet-tint text-ink/55 icon-swap group-hover:bg-violet group-hover:text-white">
+        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white/70 icon-swap">
           <Icon className="h-5 w-5" />
         </div>
       </div>
-      <h3 className="mt-4 font-display font-bold text-ink text-lg sm:text-xl">
+      <h3 className="mt-4 font-display font-bold text-lg sm:text-xl">
         {r.title}
       </h3>
-      <p className="mt-2 text-sm text-ink/65 leading-relaxed">{r.body}</p>
+      <p className="mt-2 text-sm text-white/70 leading-relaxed">{r.body}</p>
     </article>
   );
 }

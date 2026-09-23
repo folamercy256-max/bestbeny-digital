@@ -7,7 +7,7 @@ type Testimonial = {
   name: string;
   role: string;
   initials: string;
-  accent: "violet" | "gold" | "ink";
+  accent: "navy" | "gold" | "ink";
 };
 
 const TESTIMONIALS: Testimonial[] = [
@@ -17,7 +17,7 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Sarah A.",
     role: "Founder, Growth Company",
     initials: "S",
-    accent: "violet",
+    accent: "navy",
   },
   {
     quote:
@@ -38,7 +38,7 @@ const TESTIMONIALS: Testimonial[] = [
 ];
 
 const accentBg = {
-  violet: "bg-violet text-white",
+  navy: "bg-navy text-white",
   gold: "bg-gold text-ink",
   ink: "bg-ink text-white",
 } as const;
@@ -46,16 +46,15 @@ const accentBg = {
 /**
  * Testimonials
  * ------------
- * Sample testimonials shown for layout. Replace with verified client
- * testimonials before publishing. This section uses paper background,
- * visually different from the dark Stats section above it.
+ * Section background: WHITE. Sample testimonials shown for layout. Replace
+ * with verified client testimonials before publishing.
  */
 export function Testimonials() {
   return (
-    <section className="relative bg-paper py-20 sm:py-28">
+    <section className="relative bg-white py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
             What clients say
           </p>
           <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
@@ -67,9 +66,9 @@ export function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <figure
               key={t.name}
-              className="lift-on-hover rounded-2xl border border-violet/10 bg-white p-6 sm:p-7 flex flex-col"
+              className="lift-on-hover rounded-2xl border border-navy/10 bg-white p-6 sm:p-7 flex flex-col"
             >
-              <div className="flex items-center gap-1 text-violet">
+              <div className="flex items-center gap-1 text-gold">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-current" />
                 ))}

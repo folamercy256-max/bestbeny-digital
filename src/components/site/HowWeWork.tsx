@@ -3,12 +3,9 @@
 /**
  * HowWeWork
  * ---------
- * 4-step process. Numbers 01–04 are in the logo violet color. Each step
- * has a different background tint so the section feels like a real,
- * stepped journey rather than four identical cards.
- *
- * Background for this section is paper (warm off-white), which differs
- * from WhyBestBeny (cream) above it and Portfolio (sand) below it.
+ * Section background: WHITE.
+ * 4-step process. Numbers 01–04 are in the logo color (navy). Each step
+ * card uses a navy-tint background to read as a distinct block.
  */
 const STEPS = [
   {
@@ -35,10 +32,10 @@ const STEPS = [
 
 export function HowWeWork() {
   return (
-    <section className="relative bg-paper py-20 sm:py-28">
+    <section className="relative bg-white py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
             How we work
           </p>
           <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
@@ -54,13 +51,13 @@ export function HowWeWork() {
           {STEPS.map((s, i) => (
             <li
               key={s.num}
-              className="group relative rounded-2xl border border-violet/10 bg-white p-6 lift-on-hover"
+              className="group relative rounded-2xl border border-navy/10 bg-navy-tint p-6 lift-on-hover"
             >
               {/* connecting line on large screens */}
               {i < STEPS.length - 1 && (
                 <span
                   aria-hidden
-                  className="hidden lg:block absolute top-1/2 -right-2.5 h-px w-5 bg-violet/25"
+                  className="hidden lg:block absolute top-1/2 -right-2.5 h-px w-5 bg-navy/25"
                 />
               )}
               <span className="font-display text-3xl font-extrabold brand-number">

@@ -4,6 +4,8 @@
  * Single source of truth for brand identity, contact links and copy used
  * across the site. Update the WhatsApp number, email and social handles
  * here and they propagate everywhere.
+ *
+ * Brand palette (logo colors): navy blue + gold + white + black.
  */
 
 export const BRAND = {
@@ -31,11 +33,18 @@ export const NAV_LINKS = [
   { label: "FAQ", href: "#faq" },
 ] as const;
 
+/**
+ * Brand palette — gold, white, black, navy blue.
+ * Navy blue is the primary "logo color" used on buttons, numbers and key text.
+ */
 export const BRAND_COLORS = {
-  violet: "#6C4DFF",
-  violetSoft: "#8C72FF",
-  violetTint: "#EFEBFF",
+  navy: "#1E3A5F",
+  navyDeep: "#142841",
+  navySoft: "#2C4D75",
+  navyTint: "#EEF2F7",
   gold: "#F4B942",
-  ink: "#14112B",
-  paper: "#FBFAF7",
+  goldTint: "#FBF1DC",
+  white: "#FFFFFF",
+  black: "#0A0A0A",
+  ink: "#0F0F14",
 } as const;

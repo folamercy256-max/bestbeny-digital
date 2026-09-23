@@ -7,7 +7,7 @@ type Brief = {
   category: string;
   title: string;
   summary: string;
-  accent: "violet" | "gold" | "ink";
+  accent: "navy" | "gold" | "ink";
 };
 
 const BRIEFS: Brief[] = [
@@ -16,7 +16,7 @@ const BRIEFS: Brief[] = [
     title: "Consulting firm website",
     summary:
       "A clearer website for a growing consulting firm that needs to communicate its value without making visitors work for it. AI-assisted structure, hand-polished copy, fast load.",
-    accent: "violet",
+    accent: "navy",
   },
   {
     category: "Beauty & retail",
@@ -35,26 +35,25 @@ const BRIEFS: Brief[] = [
 ];
 
 const accentMap = {
-  violet: { bg: "bg-violet", soft: "bg-violet-tint", text: "text-violet" },
-  gold: { bg: "bg-gold", soft: "bg-amber-100", text: "text-amber-700" },
+  navy: { bg: "bg-navy", soft: "bg-navy-tint", text: "text-navy" },
+  gold: { bg: "bg-gold", soft: "bg-gold-tint", text: "text-amber-700" },
   ink: { bg: "bg-ink", soft: "bg-slate-100", text: "text-ink" },
 } as const;
 
 /**
  * Portfolio
  * ---------
- * Three sample briefs (illustrative, not real named clients). The "12 open
- * portfolio slots" message frames the kinds of businesses BestBeny wants to
- * work with next. This section uses the sand background to visually shift
- * from the HowWeWork section (paper) above it.
+ * Section background: NAVY TINT (very pale navy). Three sample briefs
+ * (illustrative, not real named clients). The "12 open portfolio slots"
+ * message frames the kinds of businesses BestBeny wants to work with next.
  */
 export function Portfolio() {
   return (
-    <section id="work" className="relative bg-sand py-20 sm:py-28 border-y border-violet/10">
+    <section id="work" className="relative bg-navy-tint py-20 sm:py-28 border-y border-navy/10">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
           <div className="lg:col-span-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
               Our work
             </p>
             <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
@@ -70,7 +69,7 @@ export function Portfolio() {
           <div className="lg:col-span-4 lg:text-right">
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-violet px-5 py-3 text-sm font-semibold text-violet transition-all hover:bg-violet hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-navy px-5 py-3 text-sm font-semibold text-navy transition-all hover:bg-navy hover:text-white"
             >
               View the portfolio
               <ArrowRight className="h-4 w-4" />
@@ -85,7 +84,7 @@ export function Portfolio() {
         </div>
 
         {/* Open slots banner */}
-        <div className="mt-10 rounded-2xl border border-violet/15 bg-white p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+        <div className="mt-10 rounded-2xl border border-navy/15 bg-white p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
           <div>
             <p className="font-display font-bold text-ink text-xl">
               <span className="brand-number">12</span> open portfolio slots
@@ -98,7 +97,7 @@ export function Portfolio() {
           </div>
           <Link
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-violet px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-violet-soft hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-navy-soft hover:-translate-y-0.5"
           >
             Claim a slot
             <ArrowUpRight className="h-4 w-4" />
@@ -112,7 +111,7 @@ export function Portfolio() {
 function BriefCard({ brief: b }: { brief: Brief }) {
   const a = accentMap[b.accent];
   return (
-    <article className="group lift-on-hover relative overflow-hidden rounded-2xl border border-violet/10 bg-white p-6 sm:p-7">
+    <article className="group lift-on-hover relative overflow-hidden rounded-2xl border border-navy/10 bg-white p-6 sm:p-7">
       {/* decorative chip */}
       <div className="flex items-center justify-between">
         <span
@@ -127,7 +126,7 @@ function BriefCard({ brief: b }: { brief: Brief }) {
       </div>
 
       {/* abstract visual — relevant to the brief type, not a stock image */}
-      <div className="mt-5 rounded-xl border border-violet/10 bg-paper p-4 h-32 relative overflow-hidden">
+      <div className="mt-5 rounded-xl border border-navy/10 bg-navy-tint p-4 h-32 relative overflow-hidden">
         <div className="space-y-2">
           <div className="h-2.5 w-2/3 rounded-full bg-ink/15" />
           <div className="h-2 w-5/6 rounded-full bg-ink/10" />
@@ -146,7 +145,7 @@ function BriefCard({ brief: b }: { brief: Brief }) {
 
       <Link
         href="#contact"
-        className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink/70 hover:text-violet transition-colors"
+        className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink/70 hover:text-navy transition-colors"
       >
         Read sample brief
         <ArrowUpRight className="h-4 w-4 icon-swap" />

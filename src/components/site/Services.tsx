@@ -57,19 +57,20 @@ const SERVICES: Service[] = [
 /**
  * Services
  * --------
- * All section numbers (01–04) are rendered in the logo violet color.
- * The icons stay in their default color, then change to violet on hover
- * (per the user's request). Each service card lifts on hover.
+ * Section background: GOLD TINT (soft cream). One of the four brand colors,
+ * used here as a warm, soft background to differentiate from the white
+ * About section above and the navy WhyBestBeny section below.
  *
- * This section uses a different background color (mist) than the sections
- * before and after it, so the page reads in clear visual chapters.
+ * All section numbers (01–04) are rendered in the logo color (navy).
+ * The icons stay in a neutral color, then change to navy on hover
+ * (per the user's request). Each service card lifts on hover.
  */
 export function Services() {
   return (
-    <section id="services" className="relative bg-mist py-20 sm:py-28">
+    <section id="services" className="relative bg-gold-tint py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
             What we do
           </p>
           <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
@@ -95,13 +96,13 @@ export function Services() {
 function ServiceCard({ service: s }: { service: Service }) {
   const Icon = s.icon;
   return (
-    <article className="group lift-on-hover relative overflow-hidden rounded-2xl border border-violet/10 bg-white p-6 sm:p-7">
-      {/* number — logo violet */}
+    <article className="group lift-on-hover relative overflow-hidden rounded-2xl border border-navy/10 bg-white p-6 sm:p-7">
+      {/* number — logo color (navy) */}
       <div className="flex items-start justify-between">
         <span className="font-display text-4xl font-extrabold brand-number">
           {s.num}
         </span>
-        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-tint text-ink/55 icon-swap group-hover:bg-violet group-hover:text-white">
+        <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy-tint text-ink/55 icon-swap">
           <Icon className="h-5 w-5" />
         </div>
       </div>
@@ -115,7 +116,7 @@ function ServiceCard({ service: s }: { service: Service }) {
 
       <Link
         href={s.href}
-        className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink/70 hover:text-violet transition-colors"
+        className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink/70 hover:text-navy transition-colors"
       >
         {s.cta}
         <ArrowUpRight className="h-4 w-4 icon-swap" />

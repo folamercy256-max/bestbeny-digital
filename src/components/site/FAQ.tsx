@@ -39,17 +39,16 @@ const FAQS = [
 /**
  * FAQ
  * ---
- * Uses the shadcn/ui Accordion. The "+" indicator and the question color
- * both shift to violet on hover/open. Background is mist — different from
- * Testimonials (paper) above.
+ * Section background: GOLD TINT (soft cream). Uses the shadcn/ui Accordion.
+ * The "+" indicator and the question color shift to navy on hover/open.
  */
 export function FAQ() {
   return (
-    <section id="faq" className="relative bg-mist py-20 sm:py-28 border-t border-violet/10">
+    <section id="faq" className="relative bg-gold-tint py-20 sm:py-28 border-t border-navy/10">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-violet">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
               Common questions
             </p>
             <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
@@ -64,7 +63,7 @@ export function FAQ() {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-violet px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-violet-soft hover:-translate-y-0.5"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-navy-soft hover:-translate-y-0.5"
             >
               <MessageCircle className="h-4 w-4" />
               Ask on WhatsApp
@@ -82,9 +81,9 @@ export function FAQ() {
                 <AccordionItem
                   key={f.q}
                   value={`faq-${i}`}
-                  className="rounded-xl border border-violet/10 bg-white px-5 transition-colors data-[state=open]:border-violet/40"
+                  className="rounded-xl border border-navy/10 bg-white px-5 transition-colors data-[state=open]:border-navy/40"
                 >
-                  <AccordionTrigger className="text-left text-base font-semibold text-ink hover:text-violet hover:no-underline">
+                  <AccordionTrigger className="text-left text-base font-semibold text-ink hover:text-navy hover:no-underline">
                     {f.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-sm sm:text-base text-ink/70 leading-relaxed">

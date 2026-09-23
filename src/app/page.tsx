@@ -16,29 +16,33 @@ import { Footer } from "@/components/site/Footer";
  * BestBeny Digital — single-page marketing site.
  *
  * Focus: AI Website Design service.
- * Brand color: #6C4DFF (logo violet). Accent: #F4B942 (logo gold dot).
+ * Brand palette: navy blue (logo color) + gold + white + black.
  *
- * Section background rhythm (different color per section, as requested):
- *   Hero         — paper (warm off-white)
- *   BrandMarquee — cream
- *   About        — paper
- *   Services     — mist (cool light grey-blue)
- *   WhyBestBeny  — cream
- *   HowWeWork    — paper
- *   Portfolio    — sand (warm sand)
- *   Stats        — ink (deep dark)
- *   Testimonials — paper
- *   FAQ          — mist
- *   FinalCTA     — violet (brand)
- *   Footer       — ink (deep dark)
+ * Section background rhythm — different color per section, drawn ONLY from
+ * the four brand colors (gold, white, black, navy blue) per the user's
+ * request:
+ *
+ *   Hero          — WHITE
+ *   BrandMarquee  — NAVY BLUE
+ *   About         — WHITE
+ *   Services      — GOLD (soft tint)
+ *   WhyBestBeny   — NAVY BLUE
+ *   HowWeWork     — WHITE
+ *   Portfolio     — NAVY TINT (very pale navy)
+ *   Stats         — BLACK
+ *   Testimonials  — WHITE
+ *   FAQ           — GOLD (soft tint)
+ *   FinalCTA      — NAVY BLUE
+ *   Footer        — BLACK
  *
  * Removed per the user's request:
  *   - "Strategy" section
  *   - "From the journal" section and its image
+ *   - Any image that is not relevant to the AI website design service
  */
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-paper text-ink">
+    <div className="min-h-screen flex flex-col bg-white text-ink">
       <Header />
       <main id="main" className="flex-1">
         <Hero />
