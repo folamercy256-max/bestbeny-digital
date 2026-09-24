@@ -1,5 +1,7 @@
 "use client";
 
+import { SectionBadge } from "./SectionBadge";
+
 /**
  * Stats
  * -----
@@ -47,9 +49,7 @@ export function Stats() {
       />
       <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-            By the numbers
-          </p>
+          <SectionBadge label="By the numbers" onDark showAiWebsitesCount={false} />
           <h2 className="mt-3 font-display font-extrabold tracking-tight text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
             The goal is not to make more noise. The goal is to make the right
             impression.

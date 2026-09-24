@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/brand";
+import { SectionBadge } from "./SectionBadge";
 
 const FAQS = [
   {
@@ -48,9 +49,7 @@ export function FAQ() {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
-              Common questions
-            </p>
+            <SectionBadge label="Common questions" />
             <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
               A few things you may want to know before we start.
             </h2>

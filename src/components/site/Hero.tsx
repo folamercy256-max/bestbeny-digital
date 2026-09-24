@@ -20,11 +20,11 @@ import { WHATSAPP_LINK } from "@/lib/brand";
  */
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-white">
+    <section id="home" className="relative bg-white">
       {/* soft brand wash — navy + gold */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 overflow-hidden"
         style={{
           background:
             "radial-gradient(60% 50% at 12% 12%, rgba(30,58,95,0.10), transparent 60%), radial-gradient(45% 40% at 95% 8%, rgba(244,185,66,0.18), transparent 60%)",
@@ -32,28 +32,32 @@ export function Hero() {
       />
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-grid opacity-60" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 pt-12 md:pt-20 pb-16 md:pb-24">
+      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 pt-12 md:pt-20 pb-20 md:pb-28">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Copy column */}
           <div className="lg:col-span-7 max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-navy/25 bg-white/70 backdrop-blur px-3.5 py-1.5 text-xs font-semibold text-navy">
-              <Sparkles className="h-3.5 w-3.5" />
-              AI Website Design Studio
-            </span>
-
-            <h1 className="mt-5 font-display font-extrabold tracking-tight text-ink text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.05]">
-              Launch a Professional Website Without Paying for an Expensive Hosting.
+            <h1 className="font-display font-extrabold tracking-tight text-ink text-4xl sm:text-5xl lg:text-[3.1rem] leading-[1.08]">
+              Get your business online with a professional website built with AI — without the high cost of traditional website services.
             </h1>
 
             <p className="mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">
-              You want a website for your business. But paying for hosting every
-              year is hard. We build your website with AI, host it for free on
-              a subdomain, and hand it over ready to use. No big bills. No
-              confusion. Just a clean, fast website your customers will trust —
-              so you can focus on running your business.
+              From business websites to personal brands and online services,
+              get a clean, modern website without complicated setup or
+              expensive hosting. Just choose your plan, get your website
+              online, and focus on your business.
             </p>
 
-            <div className="mt-7 flex flex-wrap items-center gap-3">
+            {/* Price highlight */}
+            <div className="mt-5 inline-flex items-center gap-3 rounded-full border border-gold/40 bg-gold-tint px-4 py-2">
+              <span className="text-xs font-semibold uppercase tracking-wider text-ink/55">
+                Simple Hosting From
+              </span>
+              <span className="font-display text-lg font-extrabold text-navy">
+                Less Than $11
+              </span>
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
@@ -101,8 +105,8 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Founder portrait column */}
-          <div className="lg:col-span-5 relative">
+          {/* Founder portrait column — extra bottom padding so the 30+ badge stays visible */}
+          <div className="lg:col-span-5 relative pt-3 pb-8">
             <FounderPortrait />
           </div>
         </div>

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Plus } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/brand";
+import { SectionBadge } from "./SectionBadge";
 
 /**
  * Portfolio
@@ -24,9 +25,7 @@ export function Portfolio() {
     <section id="work" className="relative bg-navy-tint py-20 sm:py-28 border-y border-navy/10">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
-            Our work
-          </p>
+          <SectionBadge label="Our work" showAiWebsitesCount={false} />
           <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
             14 open slots. Your project could be one of them.
           </h2>

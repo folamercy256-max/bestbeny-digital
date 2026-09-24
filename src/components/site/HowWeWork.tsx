@@ -1,5 +1,7 @@
 "use client";
 
+import { SectionBadge } from "./SectionBadge";
+
 /**
  * HowWeWork
  * ---------
@@ -35,9 +37,7 @@ export function HowWeWork() {
     <section id="process" className="relative bg-white py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
-            How we work
-          </p>
+          <SectionBadge label="How we work" />
           <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
             A straightforward process, from first conversation to launch.
           </h2>

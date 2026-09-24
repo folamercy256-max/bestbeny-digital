@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { SectionBadge } from "./SectionBadge";
 
 /**
  * About
@@ -15,9 +16,7 @@ export function About() {
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
-              About BestBeny
-            </p>
+            <SectionBadge label="About BestBeny" />
             <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
               A better way to build with AI.
             </h2>

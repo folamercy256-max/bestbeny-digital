@@ -9,6 +9,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { SectionBadge } from "./SectionBadge";
 
 type Service = {
   num: string;
@@ -70,9 +71,7 @@ export function Services() {
     <section id="services" className="relative bg-gold-tint py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-navy">
-            What we do
-          </p>
+          <SectionBadge label="What we do" />
           <h2 className="mt-3 font-display font-extrabold tracking-tight text-ink text-3xl sm:text-4xl lg:text-5xl leading-[1.1]">
             Everything your business needs to show up online.
           </h2>

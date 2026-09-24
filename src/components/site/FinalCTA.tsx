@@ -2,6 +2,7 @@
 
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_LINK } from "@/lib/brand";
+import { SectionBadge } from "./SectionBadge";
 
 /**
  * FinalCTA
@@ -27,9 +28,9 @@ export function FinalCTA() {
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-grid-gold opacity-30" />
 
       <div className="relative mx-auto w-full max-w-4xl px-5 sm:px-6 lg:px-8 text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-          Let&apos;s start
-        </p>
+        <div className="flex justify-center">
+          <SectionBadge label="Let's start" onDark showAiWebsitesCount={false} />
+        </div>
         <h2 className="mt-4 font-display font-extrabold tracking-tight text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
           Let&apos;s build a website your customers actually choose.
         </h2>
