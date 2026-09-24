@@ -139,10 +139,10 @@ function FounderPortrait() {
       {/* portrait card */}
       <div className="relative rounded-[1.75rem] overflow-hidden border border-navy/15 bg-navy shadow-[0_30px_80px_-30px_rgba(15,15,20,0.55)]">
         <Image
-          src="/brand/founder.jpeg"
+          src="/brand/founder-real.jpeg"
           alt="BestBeny Digital founder portrait"
-          width={768}
-          height={1344}
+          width={853}
+          height={1280}
           priority
           className="block w-full h-auto"
         />
