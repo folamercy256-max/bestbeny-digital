@@ -258,3 +258,13 @@
   .font-display { font-family: var(--font-display); }
   .font-sans    { font-family: var(--font-sans); }
 }
+
+/* Hero H1 — unique signature font (Playfair Display) in the logo navy color.
+   Defined as a Tailwind v4 @utility so it generates a proper utility class
+   that wins the cascade. Used only on the hero title so it stays distinctive. */
+@utility hero-title {
+  font-family: var(--font-playfair), var(--font-display), serif;
+  color: var(--brand-navy);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}

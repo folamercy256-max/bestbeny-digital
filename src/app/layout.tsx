@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -13,6 +13,15 @@ const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
   display: "swap",
+});
+
+// Unique display font used ONLY for the hero H1 — gives the page a
+// distinctive signature that sets it apart from generic sans-serif landings.
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -58,10 +67,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${manrope.variable} font-sans antialiased bg-paper text-ink`}
-      >
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${inter.variable} ${manrope.variable} ${playfair.variable}`}
+    >
+      <body className="font-sans antialiased bg-paper text-ink">
         {children}
         <Toaster />
       </body>

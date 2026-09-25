@@ -36,7 +36,7 @@ export function Hero() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Copy column */}
           <div className="lg:col-span-7 max-w-2xl">
-            <h1 className="font-display font-extrabold tracking-tight text-ink text-4xl sm:text-5xl lg:text-[3.1rem] leading-[1.08]">
+            <h1 className="hero-title tracking-tight text-4xl sm:text-5xl lg:text-[3.1rem] leading-[1.1]">
               Get your business online with a professional website built with AI — without the high cost of traditional website services.
             </h1>
 
