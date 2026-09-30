@@ -65,18 +65,26 @@ The site is live at <https://bestbenydigital.space-z.ai/>. The z.ai sandbox uses
 
 ### Option B — Cloudflare Pages (recommended)
 
-1. Push this repo to GitHub (already done — <https://github.com/folamercy256-max/bestbeny-digital>).
-2. Go to <https://dash.cloudflare.com/> → Workers & Pages → **Create** → **Pages** → **Connect to Git**.
-3. Authorize Cloudflare to access your GitHub account and select the `folamercy256-max/bestbeny-digital` repo.
-4. In the build setup screen, set:
-   - **Framework preset:** Next.js (Cloudflare Pages will auto-detect)
+The repo is already on GitHub at <https://github.com/folamercy256-max/bestbeny-digital>.
+
+**Step-by-step in the Cloudflare dashboard:**
+
+1. Go to <https://dash.cloudflare.com/> → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+2. Authorize Cloudflare to access your GitHub account and select `folamercy256-max/bestbeny-digital`.
+3. **Project name:** `bestbeny-digital` (this becomes your subdomain — `bestbeny-digital.pages.dev`).
+4. **Production branch:** `main`.
+5. Under **Build settings**, set EXACTLY these values (don't add anything else):
+   - **Framework preset:** `Next.js (Static HTML Export)` is fine, or `None` — doesn't matter.
    - **Build command:** `npx @cloudflare/next-on-pages`
    - **Build output directory:** `.vercel/output/static`
-   - **Environment variables:** `NEXT_TELEMETRY_DISABLED=1` (optional, silences telemetry)
-5. Click **Save and Deploy**. Cloudflare runs the build, then serves the site at `https://bestbeny-digital.pages.dev` (or similar — Cloudflare assigns the subdomain based on your project name).
-6. (Optional) Add a custom domain under **Custom domains** in the Cloudflare dashboard.
+   - **Root directory:** `/` (default)
+   - **Environment variables:** `NEXT_TELEMETRY_DISABLED` = `1` (optional)
+   - **⚠️ Leave "Deploy command" EMPTY.** Do NOT type `npx wrangler deploy` here — that's for Cloudflare Workers, not Pages. Pages auto-deploys the build output directory after the build step.
+6. Click **Save and Deploy**.
 
-The `.cloudflare/pages.toml` file in this repo pre-fills the build command and output directory. After the first deploy, every push to `main` auto-deploys.
+Cloudflare will run `npx @cloudflare/next-on-pages` (which internally runs `next build` + post-processes the output into a Cloudflare Workers bundle), then auto-deploy the `.vercel/output/static` directory to your `*.pages.dev` URL.
+
+After the first deploy, every push to `main` auto-redeploys.
 
 ### Option C — Vercel (alternative)
 
