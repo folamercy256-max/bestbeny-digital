@@ -52,3 +52,18 @@ prompt
 server.log
 # Skills directory
 /skills/
+
+# z.ai sandbox runtime artifacts (don't ship to GitHub)
+/.zscripts/
+/Caddyfile
+/examples/
+
+# SQLite database (local dev only)
+/db/
+
+# Debugging / work-in-progress screenshots (don't ship to GitHub)
+/scripts/screenshots*/
+/scripts/screenshots-*/
+/tool-results/
+/upload/
+/worklog.md
