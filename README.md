@@ -51,22 +51,47 @@ bun run lint
 
 ## Deployment
 
+This codebase deploys to **three platforms** without code changes:
+
+| Platform | Status | How |
+|----------|--------|-----|
+| z.ai sandbox | Live at <https://bestbenydigital.space-z.ai/> | Uses `output: "standalone"` + `.next/standalone/server.js` |
+| Cloudflare Pages | Deploy via the steps below | Uses `@cloudflare/next-on-pages` adapter |
+| Vercel | Optional fallback | Uses `next build` (overridden by `vercel.json`) |
+
 ### Option A — z.ai sandbox (already running)
 
 The site is live at <https://bestbenydigital.space-z.ai/>. The z.ai sandbox uses `output: "standalone"` in `next.config.ts` and runs `.next/standalone/server.js` in production.
 
-### Option B — Vercel
+### Option B — Cloudflare Pages (recommended)
+
+1. Push this repo to GitHub (already done — <https://github.com/folamercy256-max/bestbeny-digital>).
+2. Go to <https://dash.cloudflare.com/> → Workers & Pages → **Create** → **Pages** → **Connect to Git**.
+3. Authorize Cloudflare to access your GitHub account and select the `folamercy256-max/bestbeny-digital` repo.
+4. In the build setup screen, set:
+   - **Framework preset:** Next.js (Cloudflare Pages will auto-detect)
+   - **Build command:** `npx @cloudflare/next-on-pages`
+   - **Build output directory:** `.vercel/output/static`
+   - **Environment variables:** `NEXT_TELEMETRY_DISABLED=1` (optional, silences telemetry)
+5. Click **Save and Deploy**. Cloudflare runs the build, then serves the site at `https://bestbeny-digital.pages.dev` (or similar — Cloudflare assigns the subdomain based on your project name).
+6. (Optional) Add a custom domain under **Custom domains** in the Cloudflare dashboard.
+
+The `.cloudflare/pages.toml` file in this repo pre-fills the build command and output directory. After the first deploy, every push to `main` auto-deploys.
+
+### Option C — Vercel (alternative)
 
 1. Push this repo to GitHub.
 2. Go to <https://vercel.com/new> and import the GitHub repo.
-3. Vercel auto-detects Next.js — keep the defaults:
-   - **Build Command:** `next build` (overridden by `vercel.json`, do NOT use the package.json `build` script which has z.ai-specific `cp` commands)
-   - **Output Directory:** `.next` (auto-detected)
-   - **Install Command:** `bun install`
-4. No environment variables are required for the site to render (Prisma is configured but unused).
+3. Vercel auto-detects Next.js — keep the defaults (the `vercel.json` file in this repo handles the build command override).
+4. No environment variables required.
 5. Click **Deploy**.
 
-The `vercel.json` file in this repo handles the build command override automatically — Vercel will run `next build` (not the z.ai-flavored `build` script in package.json) and use its own deployment output. The z.ai sandbox continues to work because `output: "standalone"` is preserved in `next.config.ts`.
+### Why the same codebase works on all three
+
+- `next.config.ts` keeps `output: "standalone"` — required by z.ai sandbox.
+- Cloudflare's `@cloudflare/next-on-pages` adapter runs `next build` underneath (which respects `output: "standalone"`), then post-processes the output into a Cloudflare Workers bundle. The standalone flag is harmless here.
+- Vercel uses its own build pipeline; the `vercel.json` override ensures it runs `next build` (not the package.json `build` script that has z.ai-specific `cp -r` commands).
+
 
 ## Customising
 

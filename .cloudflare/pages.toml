@@ -1,0 +1,17 @@
+# Cloudflare Pages — build configuration
+# This file tells Cloudflare Pages how to build the Next.js site.
+# When you connect this GitHub repo to Cloudflare Pages, it reads this file.
+
+# Build command — uses the @cloudflare/next-on-pages adapter which:
+#   1. Runs `next build` underneath
+#   2. Post-processes the .next/ output into a Cloudflare Workers-compatible bundle
+#   3. Outputs to .vercel/output/static (the OpenNext convention)
+# Note: we do NOT use the package.json `build` script because it has z.ai-specific
+# `cp -r .next/static .next/standalone/...` commands that don't apply on Cloudflare.
+[build]
+command = "npx @cloudflare/next-on-pages"
+output_directory = ".vercel/output/static"
+
+[build.environment]
+NEXT_TELEMETRY_DISABLED = "1"
+NODE_VERSION = "20"
